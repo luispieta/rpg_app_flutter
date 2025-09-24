@@ -1,22 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:rpg_app/presenter/arena/arena_view.dart';
+import 'package:rpg_app/presenter/historicoBatalhas/historioco_batalhas_view.dart';
+import 'package:rpg_app/presenter/personagem/personagem_view.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
-  
+
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  int _itemSelecionado = 0;
+  final List<Widget> _telas = const [
+    ArenaView(),
+    PersonagemView(),
+    HistoriocoBatalhasView()
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Vamo"),
+        title: Text("Home"),
       ),
       body: Center(
-        child: Text("Aiiii"),
+        child: Text("Tela selecionada $_itemSelecionado"),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print("Botão do bom");
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _itemSelecionado,
+        onTap: (index) {       //Utilizado para tocar no icone e selecionar
+          setState(() {
+            _itemSelecionado = index;
+          });
         },
-        child: Icon(Icons.add),
+        items: [
+          BottomNavigationBarItem(icon: Icon(
+            Icons.stadium), label: "Arena"
+          ),
+          BottomNavigationBarItem(icon: Icon(
+            Icons.person), label: "Personagens"
+          ),
+          BottomNavigationBarItem(icon: Icon(
+            Icons.history), label: "Histórico de batalhas"
+          ),
+        ],
       ),
     );
   }
