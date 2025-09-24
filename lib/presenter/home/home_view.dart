@@ -24,9 +24,7 @@ class _HomeViewState extends State<HomeView> {
       appBar: AppBar(
         title: Text("Home"),
       ),
-      body: Center(
-        child: Text("Tela selecionada $_itemSelecionado"),
-      ),
+      body: _telas[_itemSelecionado],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _itemSelecionado,
         onTap: (index) {       //Utilizado para tocar no icone e selecionar

@@ -8,5 +8,4 @@ class HistoriocoBatalhasView extends StatelessWidget{
     return const Center(child: Text("Histórico de Batalhas"),);
   }
 
-  
 }

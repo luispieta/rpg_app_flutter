@@ -4,7 +4,7 @@ class ArenaView extends StatelessWidget{
   const ArenaView({super.key});
   
   
-@override
+  @override
   Widget build(BuildContext context) {
         return const Center(child: Text("Arena"),);
 
