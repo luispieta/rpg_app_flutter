@@ -12,10 +12,10 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   int _itemSelecionado = 0;
-  final List<Widget> _telas = const [
-    ArenaView(),
-    PersonagemView(),
-    HistoriocoBatalhasView()
+  final List<Widget> _telas = [
+    const ArenaView(),
+    PersonagensView(),
+    const HistoriocoBatalhasView()
   ];
 
   @override
