@@ -1,7 +1,7 @@
 import 'package:rpg_app/domain/entities/arquetipo.dart';
 
-class Guerreiro extends Arquetipo {
-  Guerreiro({
+class Samurai extends Arquetipo {
+  Samurai({
     required super.bonusVida, 
     required super.bonusAtaque, 
     required super.bonusEscudo, 
