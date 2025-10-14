@@ -7,6 +7,7 @@ class RpgApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "RPG Futurístico",
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
       ),

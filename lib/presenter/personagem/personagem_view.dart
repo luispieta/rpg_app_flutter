@@ -5,6 +5,7 @@ import 'package:rpg_app/domain/entities/humano.dart';
 import 'package:rpg_app/domain/entities/monstro.dart';
 import 'package:rpg_app/domain/entities/personagem.dart';
 import 'package:rpg_app/domain/entities/samurai.dart';
+import 'package:rpg_app/presenter/cadastroPersonagem/cadastroPersonagem_view.dart';
 
 class PersonagensView extends StatelessWidget {
   PersonagensView({super.key});
@@ -35,6 +36,22 @@ class PersonagensView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      body: _contruirLista(),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add), 
+        onPressed: () {
+          Navigator.push(
+            context, MaterialPageRoute(
+              builder: (context) => CadastroPersonagemView()
+            )
+          );
+        }
+      ),
+    );
+  }
+
+  Widget _contruirLista() {
     return ListView.builder(
       itemCount: _personagens.length,
       itemBuilder: (context, index) {
@@ -46,4 +63,5 @@ class PersonagensView extends StatelessWidget {
       },
     );
   }
+
 }

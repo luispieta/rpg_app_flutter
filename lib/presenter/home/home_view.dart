@@ -22,7 +22,8 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home"),
+        title: Text("RPG Futurístico"),
+        centerTitle: true,
       ),
       body: _telas[_itemSelecionado],
       bottomNavigationBar: BottomNavigationBar(
@@ -43,7 +44,7 @@ class _HomeViewState extends State<HomeView> {
             Icons.history), label: "Histórico de batalhas"
           ),
         ],
-      ),
+      ),  
     );
   }
 }
