@@ -43,7 +43,7 @@ class PersonagensView extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context, MaterialPageRoute(
-              builder: (context) => CadastroPersonagemView()
+              builder: (context) => CadastropersonagemView()
             )
           );
         }
