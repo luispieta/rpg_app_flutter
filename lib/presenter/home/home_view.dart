@@ -23,6 +23,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar: AppBar(
         title: Text("RPG Futurístico"),
+        backgroundColor: const Color.fromARGB(255, 207, 230, 249),
         centerTitle: true,
       ),
       body: _telas[_itemSelecionado],
